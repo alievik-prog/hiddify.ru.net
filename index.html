@@ -14,45 +14,37 @@
   <div class="logo">Hiddify VPN</div>
 
   <nav class="nav">
-    <a href="#features">Преимущества</a>
-    <a href="#platforms">Платформы</a>
-    <a href="#pricing">Цены</a>
-    <a href="#faq">FAQ</a>
-    <a href="#blog">Блог</a>
+    <a href="#features" data-i18n="navFeatures">Преимущества</a>
+    <a href="#platforms" data-i18n="navPlatforms">Платформы</a>
+    <a href="#pricing" data-i18n="navPricing">Цены</a>
+    <a href="#faq" data-i18n="navFaq">FAQ</a>
+    <a href="#blog" data-i18n="navBlog">Блог</a>
   </nav>
 
   <div class="header-actions">
-    <a class="btn-outline" href="#">Войти</a>
-
-    <!-- ✅ Сразу к тарифам -->
-    <a class="btn-main" href="#pricing">Получить VPN</a>
+   
+    <a class="btn-outline" href="#" data-i18n="btnLogin">Войти</a>
+    <a class="btn-main" href="#" data-i18n="btnGetVpn">Получить VPN</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>Один VPN.<br>Безграничные возможности.</h1>
+    <h1 data-i18n="title">Один VPN.<br>Безграничные возможности.</h1>
 
-    <p>
+    <p data-i18n="subtitle">
       Hiddify VPN защищает вашу приватность, ускоряет соединение
       и помогает обходить блокировки по всему миру.
     </p>
 
     <div class="hero-buttons">
-
-      <!-- ✅ Бесплатно сразу выдаёт ключ -->
       <a class="btn-main"
-         href="https://vpn.hiddify.ru.net/JQ2AiELz7hWZMgZ3e2/6144bf8f-5244-4f4d-bdad-273a2a6f9e7e/#1"
-         target="_blank">
-        Попробовать бесплатно
-      </a>
-
-      <!-- ✅ Купить ведёт к тарифам -->
-      <a class="btn-outline" href="#pricing">
-        Купить VPN
-      </a>
-
+   href="https://vpn.hiddify.ru.net/JQ2AiELz7hWZMgZ3e2/6144bf8f-5244-4f4d-bdad-273a2a6f9e7e/#1"
+   target="_blank">
+   Попробовать бесплатно
+</a>
+      <a class="btn-outline" href="#" data-i18n="btnBuy">Купить VPN</a>
     </div>
   </div>
 
@@ -63,44 +55,44 @@
 
 <!-- FEATURES -->
 <section id="features" class="section">
-  <h2>Почему выбирают Hiddify VPN?</h2>
+  <h2 data-i18n="featuresTitle">Почему выбирают Hiddify VPN?</h2>
 
   <div class="grid-3">
     <div class="card">
-      <h3>Обходит блокировки</h3>
-      <p>Работает там, где другие VPN бессильны.</p>
+      <h3 data-i18n="f1Title">Обходит блокировки</h3>
+      <p data-i18n="f1Text">Работает там, где другие VPN бессильны.</p>
     </div>
 
     <div class="card">
-      <h3>Полная анонимность</h3>
-      <p>Современное шифрование и защита от слежки.</p>
+      <h3 data-i18n="f2Title">Полная анонимность</h3>
+      <p data-i18n="f2Text">Современное шифрование и защита от слежки.</p>
     </div>
 
     <div class="card">
-      <h3>Максимальная скорость</h3>
-      <p>Без просадок и ограничений по трафику.</p>
+      <h3 data-i18n="f3Title">Максимальная скорость</h3>
+      <p data-i18n="f3Text">Без просадок и ограничений по трафику.</p>
     </div>
 
     <div class="card">
-      <h3>До 5 устройств</h3>
-      <p>Одна подписка для телефона, ноутбука и ТВ.</p>
+      <h3 data-i18n="f4Title">До 5 устройств</h3>
+      <p data-i18n="f4Text">Одна подписка для телефона, ноутбука и ТВ.</p>
     </div>
 
     <div class="card">
-      <h3>Блокировка рекламы</h3>
-      <p>Встроенный фильтр рекламы и трекеров.</p>
+      <h3 data-i18n="f5Title">Блокировка рекламы</h3>
+      <p data-i18n="f5Text">Встроенный фильтр рекламы и трекеров.</p>
     </div>
 
     <div class="card">
-      <h3>Глобальная сеть серверов</h3>
-      <p>Тысячи серверов по всему миру.</p>
+      <h3 data-i18n="f6Title">Глобальная сеть серверов</h3>
+      <p data-i18n="f6Text">Тысячи серверов по всему миру.</p>
     </div>
   </div>
 </section>
 
 <!-- PLATFORMS -->
 <section id="platforms" class="section platforms">
-  <h2>Защитите каждое подключение</h2>
+  <h2 data-i18n="platformTitle">Защитите каждое подключение</h2>
 
   <p class="platform-subtitle">
     Скачайте Hiddify VPN сегодня и подключите до 5 устройств с одной подпиской.
@@ -108,33 +100,23 @@
 
   <div class="platform-grid">
 
-    <a class="platform-card"
-       href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Windows-Setup-x64.Msix"
-       target="_blank">
+    <a class="platform-card" href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Windows-Setup-x64.Msix" target="_blank">
       <img src="img/windows.png" class="platform-img" alt="Windows">
     </a>
 
-    <a class="platform-card"
-       href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg"
-       target="_blank">
+    <a class="platform-card" href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg" target="_blank">
       <img src="img/macos.png" class="platform-img" alt="macOS">
     </a>
 
-    <a class="platform-card"
-       href="https://play.google.com/store/apps/details?id=app.hiddify.com"
-       target="_blank">
+    <a class="platform-card" href="https://play.google.com/store/apps/details?id=app.hiddify.com" target="_blank">
       <img src="img/android.png" class="platform-img" alt="Android">
     </a>
 
-    <a class="platform-card"
-       href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532"
-       target="_blank">
+    <a class="platform-card" href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532" target="_blank">
       <img src="img/ios.png" class="platform-img" alt="iOS">
     </a>
 
-    <a class="platform-card"
-       href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Linux-x64.AppImage"
-       target="_blank">
+    <a class="platform-card" href="https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-Linux-x64.AppImage" target="_blank">
       <img src="img/linux.png" class="platform-img" alt="Linux">
     </a>
 
@@ -143,38 +125,70 @@
 
 <!-- PRICING -->
 <section id="pricing" class="section alt">
-  <h2>Выберите тариф Hiddify VPN</h2>
+  <h2 data-i18n="pricingTitle">Выберите тариф Hiddify VPN </h2>
 
   <div class="grid-3">
 
     <!-- PLAN 1 -->
     <div class="price-card">
-      <h3>Hiddify VPN</h3>
+      <h3>Hiddify VPN </h3>
       <div class="price">200 ₽ <span>/месяц</span></div>
 
       <a href="pay.html" class="btn-plan btn-yellow">Получить</a>
 
       <p class="price-note">Кредитная карта не требуется</p>
+
+      <h4>Конфиденциальность и безопасность для всех</h4>
+      <ul class="price-list">
+        <li>Защита 1 устройства за раз</li>
+        <li>Средняя скорость Hiddify VPN</li>
+        <li>Подключение к серверам в  странах</li>
+      </ul>
+
+      <p class="price-footer">Оплата: 200</p>
     </div>
 
     <!-- PLAN 2 -->
     <div class="price-card featured">
-      <h3>Hiddify VPN</h3>
+      <h3>Hiddify VPN </h3>
       <div class="price">1000 ₽ <span>/6 месяцев</span></div>
 
       <a href="pay.html" class="btn-plan btn-purple">Получить</a>
 
       <p class="price-note">Гарантия возврата средств 30 дней</p>
+
+      <h4>Дополнительные функции и самая высокая скорость</h4>
+      <ul class="price-list">
+        <li>Защита до 5 устройств</li>
+        <li>Максимальная скорость Hiddify VPN</li>
+        <li>Доступ к серверам по всему миру</li>
+        <li>Блокировка рекламы и трекеров</li>
+        <li>Приоритетная поддержка</li>
+      </ul>
+
+      <p class="price-footer">
+        Оплата 1000 ₽ за первые 6 месяцев, затем продление по выбранному плану.
+      </p>
     </div>
 
     <!-- PLAN 3 -->
     <div class="price-card">
-      <h3>Hiddify VPN</h3>
+      <h3>Hiddify VPN </h3>
       <div class="price">1800 ₽ <span>/12 месяцев</span></div>
 
       <a href="pay.html" class="btn-plan btn-green">Получить</a>
 
-      <p class="price-note">Поддержка 24/7</p>
+      <p class="price-note">Гарантия возврата средств 30 дней</p>
+
+      <h4>Получите доступ ко всем сервисам Hiddify VPN</h4>
+      <ul class="price-list">
+        <li>Hiddify VPN</li>
+        <li>Максимальная защита</li>
+        <li>Расширенные функции безопасности</li>
+        <li>Поддержка 24/7</li>
+      </ul>
+
+      <p class="price-footer">Оплата: 1800 ₽ в год</p>
     </div>
 
   </div>
@@ -182,52 +196,53 @@
 
 <!-- FAQ -->
 <section id="faq" class="section">
-  <h2>Частые вопросы</h2>
+  <h2 data-i18n="faqTitle">Частые вопросы</h2>
 
   <div class="faq">
     <details>
-      <summary>Как подключиться?</summary>
-      <p>Выберите тариф, получите ключ и подключитесь за 1 минуту.</p>
+      <summary data-i18n="q1">Как подключиться?</summary>
+      <p data-i18n="a1">Выберите тариф, получите ключ и подключитесь за 1 минуту.</p>
     </details>
 
     <details>
-      <summary>Есть ли бесплатный тест?</summary>
-      <p>Да, вы можете попробовать бесплатно перед покупкой.</p>
+      <summary data-i18n="q2">Есть ли бесплатный тест?</summary>
+      <p data-i18n="a2">Да, вы можете попробовать бесплатно перед покупкой.</p>
     </details>
 
     <details>
-      <summary>Сколько устройств поддерживается?</summary>
-      <p>До 5 устройств на одной подписке.</p>
+      <summary data-i18n="q3">Сколько устройств поддерживается?</summary>
+      <p data-i18n="a3">До 5 устройств на одной подписке.</p>
     </details>
   </div>
 </section>
 
 <!-- BLOG -->
 <section id="blog" class="section alt">
-  <h2>Блог Hiddify VPN</h2>
+  <h2 data-i18n="blogTitle">Блог Hiddify VPN</h2>
 
   <div class="grid-3">
     <div class="card">
-      <h3>Почему важна приватность?</h3>
-      <p>Как VPN защищает ваши данные в интернете.</p>
+      <h3 data-i18n="b1Title">Почему важна приватность?</h3>
+      <p data-i18n="b1Text">Как VPN защищает ваши данные в интернете.</p>
     </div>
 
     <div class="card">
-      <h3>VPN для стриминга</h3>
-      <p>Открывайте доступ к контенту по всему миру.</p>
+      <h3 data-i18n="b2Title">VPN для стриминга</h3>
+      <p data-i18n="b2Text">Открывайте доступ к контенту по всему миру.</p>
     </div>
 
     <div class="card">
-      <h3>VPN на телефоне</h3>
-      <p>Используйте VPN на Android и iOS.</p>
+      <h3 data-i18n="b3Title">VPN на телефоне</h3>
+      <p data-i18n="b3Text">Используйте VPN на Android и iOS.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 Hiddify VPN. Все права защищены.</p>
+  <p data-i18n="footer">© 2026 Hiddify VPN. Все права защищены.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
