@@ -42,6 +42,8 @@
   index = index ? parseInt(index) : 0;
 
   const bank = banks[index];
+console.log("INDEX =", index);
+console.log("BANK =", bank);
 
   document.getElementById("bank-name").textContent = bank.name;
   document.getElementById("bank-qr").src = bank.qr;
