@@ -1,8 +1,8 @@
 const translations = {
   ru: {
     navFeatures: "Преимущества",
+    navPlatforms: "Платформы",
     navPricing: "Цены",
-    navCompare: "Сравнение",
     navFaq: "FAQ",
     navBlog: "Блог",
 
@@ -32,18 +32,30 @@ const translations = {
     f6Title: "Глобальная сеть серверов",
     f6Text: "Тысячи серверов по всему миру.",
 
+    platformTitle: "Защитите каждое подключение",
+    platformSubtitle:
+      "Скачайте Hiddify VPN сегодня и подключите до 10 устройств с одной подпиской.",
+
+    platWindows: "Windows",
+    platMac: "macOS",
+    platAndroid: "Android",
+    platIOS: "iPhone/iPad",
+    platLinux: "Linux",
+    platChrome: "Chrome",
+    platFirefox: "Firefox",
+    platChromebook: "Chromebook",
+    platAppleTV: "Apple TV",
+    platAndroidTV: "Android TV",
+    platFireTV: "Fire TV",
+
     pricingTitle: "Выберите тариф Hiddify VPN Plus",
     p1Title: "1 месяц",
     p1Text: "Идеально для теста",
-    p2Title: "6 месяцев",
+    p2Title: "12 месяцев",
     p2Text: "Лучшее предложение",
-    p3Title: "12 месяца",
+    p3Title: "24 месяца",
     p3Text: "Максимальная выгода",
     btnChoose: "Выбрать",
-
-    compareTitle: "Сравнение с другими VPN",
-    compareText:
-      "Hiddify VPN предлагает максимальную безопасность и скорость по сравнению с конкурентами.",
 
     faqTitle: "Частые вопросы",
     q1: "Как подключиться?",
@@ -62,26 +74,12 @@ const translations = {
     b3Text: "Используйте VPN на Android и iOS.",
 
     footer: "© 2026 Hiddify VPN. Все права защищены."
-    platformTitle: "Защитите каждое подключение",
-platformSubtitle: "Скачайте Hiddify VPN сегодня и подключите до 10 устройств с одной подпиской.",
-
-platWindows: "Windows",
-platMac: "macOS",
-platAndroid: "Android",
-platIOS: "iPhone/iPad",
-platLinux: "Linux",
-platChrome: "Chrome",
-platFirefox: "Firefox",
-platChromebook: "Chromebook",
-platAppleTV: "Apple TV",
-platAndroidTV: "Android TV",
-platFireTV: "Fire TV",
   },
 
   en: {
     navFeatures: "Features",
+    navPlatforms: "Platforms",
     navPricing: "Pricing",
-    navCompare: "Comparison",
     navFaq: "FAQ",
     navBlog: "Blog",
 
@@ -111,18 +109,30 @@ platFireTV: "Fire TV",
     f6Title: "Global server network",
     f6Text: "Thousands of servers worldwide.",
 
+    platformTitle: "Protect every connection",
+    platformSubtitle:
+      "Download Hiddify VPN today and connect up to 10 devices with one subscription.",
+
+    platWindows: "Windows",
+    platMac: "macOS",
+    platAndroid: "Android",
+    platIOS: "iPhone/iPad",
+    platLinux: "Linux",
+    platChrome: "Chrome",
+    platFirefox: "Firefox",
+    platChromebook: "Chromebook",
+    platAppleTV: "Apple TV",
+    platAndroidTV: "Android TV",
+    platFireTV: "Fire TV",
+
     pricingTitle: "Choose your Hiddify VPN Plus plan",
     p1Title: "1 month",
     p1Text: "Perfect for testing",
-    p2Title: "6 months",
+    p2Title: "12 months",
     p2Text: "Best offer",
-    p3Title: "12 months",
+    p3Title: "24 months",
     p3Text: "Maximum savings",
     btnChoose: "Select",
-
-    compareTitle: "Comparison with other VPNs",
-    compareText:
-      "Hiddify VPN delivers top security and speed compared to competitors.",
 
     faqTitle: "Frequently Asked Questions",
     q1: "How do I connect?",
@@ -141,20 +151,6 @@ platFireTV: "Fire TV",
     b3Text: "Use VPN on Android and iOS.",
 
     footer: "© 2026 Hiddify VPN. All rights reserved."
-  platformTitle: "Protect every connection",
-platformSubtitle: "Download Hiddify VPN today and connect up to 10 devices with one subscription.",
-
-platWindows: "Windows",
-platMac: "macOS",
-platAndroid: "Android",
-platIOS: "iPhone/iPad",
-platLinux: "Linux",
-platChrome: "Chrome",
-platFirefox: "Firefox",
-platChromebook: "Chromebook",
-platAppleTV: "Apple TV",
-platAndroidTV: "Android TV",
-platFireTV: "Fire TV",
   }
 };
 
@@ -168,13 +164,7 @@ function setLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ruBtn = document.getElementById("lang-ru");
-  const enBtn = document.getElementById("lang-en");
-
-  if (ruBtn && enBtn) {
-    ruBtn.addEventListener("click", () => setLanguage("ru"));
-    enBtn.addEventListener("click", () => setLanguage("en"));
-  }
-
+  document.getElementById("lang-ru").onclick = () => setLanguage("ru");
+  document.getElementById("lang-en").onclick = () => setLanguage("en");
   setLanguage("ru");
 });
