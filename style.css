@@ -481,14 +481,8 @@ body {
   margin-bottom: 18px;
   color: #111;
 }
-
 .contact-box button {
   width: 100%;
-  max-width: 360px;
+  max-width: 720px;
   border-radius: 14px;
-}
-
-.contact-box button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
