@@ -20,14 +20,24 @@
       Перейти в Сбербанк для перевода
     </a>
     <form class="contact-box" action="https://formspree.io/f/xrepoonk" method="POST">
-  <h4>
-  После оплаты отправьте свой контактный номер, фамилию, имя отправителя и почту
-  или номер WhatsApp, чтобы мы отправили вам ключ.
+ <h4>
+  После оплаты, пожалуйста, оставьте ваши контактные данные, чтобы мы могли отправить вам ключ доступа.
+  Укажите имя, фамилию, номер телефона отправителя и удобный способ связи (WhatsApp/Telegram/MAX).
 </h4>
 
   <input type="hidden" name="source" value="Оплата Hiddify VPN — hiddify.ru.net/pay.html">
  
-  <textarea name="message" placeholder="Напишите сюда ваши данные для получения ключа..." required></textarea>
+  <input type="text" name="firstname" placeholder="Имя" required>
+
+<input type="text" name="lastname" placeholder="Фамилия" required>
+
+<input type="text" name="sender_phone" placeholder="Номер телефона отправителя (с которого оплатили)" required>
+
+<input type="text" name="contact_phone" placeholder="Ваш номер телефона для связи" required>
+
+<input type="email" name="email" placeholder="Email для получения ключа" required>
+
+<input type="text" name="messenger" placeholder="WhatsApp / Telegram / MAX (ник или номер)">
 
   <button type="submit" class="btn-main">Отправить данные</button>
 
