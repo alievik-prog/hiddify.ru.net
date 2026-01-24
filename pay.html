@@ -6,6 +6,7 @@
   <title>Оплата — Hiddify VPN</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <section class="section">
@@ -14,93 +15,86 @@
   <div class="pay-box">
     <h3>Наведите камерой на QR-код</h3>
 
+    <!-- QR -->
     <img id="bank-qr" class="pay-qr" src="" alt="QR для оплаты">
 
+    <!-- Link -->
     <a id="bank-link" class="btn-main" href="#" target="_blank">
       Перейти в Сбербанк для перевода
     </a>
-    <div class="contact-box">
-  <h4>После оплаты отправьте данные для получения ключа</h4>
 
-  <input id="firstname" placeholder="Имя *" required>
-  <input id="lastname" placeholder="Фамилия *" required>
+    <!-- FORM -->
+    <form id="contact-form" class="contact-box">
+      <h4>
+        После оплаты оставьте ваши контактные данные,
+        чтобы мы отправили вам ключ доступа.
+      </h4>
 
-  <input id="senderphone" placeholder="Номер телефона, с которого оплатили *" required>
+      <input name="firstname" placeholder="Имя *" required>
+      <input name="lastname" placeholder="Фамилия *" required>
 
-  <input id="contactphone" placeholder="Ваш номер для связи *" required>
+      <input name="sender_phone"
+        placeholder="Номер телефона, с которого оплатили *"
+        required>
 
-  <input id="email" placeholder="Email (необязательно)">
-  <input id="telegram" placeholder="Telegram или WhatsApp (необязательно)">
+      <input name="contact_phone"
+        placeholder="Ваш номер для связи *"
+        required>
 
-  <button class="btn-main" onclick="sendToTelegram()">
-    Отправить данные
-  </button>
+      <input name="email"
+        type="email"
+        placeholder="Email (необязательно)">
 
-  <p class="contact-note">
-    Мы вышлем ключ после подтверждения оплаты.
-  </p>
-</div>
+      <input name="messenger"
+        placeholder="WhatsApp / Telegram / MAX (необязательно)">
 
- <h4>
-  После оплаты, пожалуйста, оставьте ваши контактные данные, чтобы мы могли отправить вам ключ доступа.
-  Укажите имя, фамилию, номер телефона отправителя и удобный способ связи (WhatsApp/Telegram/MAX).
-</h4>
+      <button type="submit" class="btn-main">
+        Отправить данные
+      </button>
 
-  <input type="hidden" name="source" value="Оплата Hiddify VPN — hiddify.ru.net/pay.html">
- 
-  <input type="text" name="firstname" placeholder="Имя *" required>
-
-<input type="text" name="lastname" placeholder="Фамилия *" required>
-
-<input type="text" name="sender_phone" placeholder="Номер телефона отправителя (с которого была оплата) *" required>
-
-<input type="text" name="contact_phone" placeholder="Ваш номер телефона для связи *" required>
-
-<input type="email" name="email" placeholder="Email (необязательно)">
-
-<input type="text" name="messenger" placeholder="WhatsApp / Telegram / MAX (необязательно)">
-
-  <button type="submit" class="btn-main">Отправить данные</button>
-
-  <p class="contact-note">
-    Мы вышлем ключ и инструкцию после подтверждения оплаты.
-  </p>
-</form>
+      <p class="contact-note">
+        Мы вышлем ключ после подтверждения оплаты.
+      </p>
+    </form>
 
   </div>
 </section>
 
 <script>
-  const banks = [
-    {
-      name: "Сбербанк (№1)",
-      qr: "img/pay1.png",
-      link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79203794100"
-    },
-    {
-      name: "Сбербанк (№2)",
-      qr: "img/pay3.png",
-      link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79298791010"
-    }
-  ];
+/* ===== QR ПО ОЧЕРЕДИ ===== */
 
-  let index = sessionStorage.getItem("payBankIndex");
-  index = index ? parseInt(index) : 0;
+const banks = [
+  {
+    qr: "img/pay1.png",
+    link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79203794100"
+  },
+  {
+    qr: "img/pay3.png",
+    link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79298791010"
+  }
+];
 
-  const bank = banks[index];
+let index = sessionStorage.getItem("payBankIndex");
+index = index ? parseInt(index) : 0;
 
-  document.getElementById("bank-qr").src = bank.qr;
-  document.getElementById("bank-link").href = bank.link;
+const bank = banks[index];
 
-  index = (index + 1) % banks.length;
-  sessionStorage.setItem("payBankIndex", index);
-</script>
+document.getElementById("bank-qr").src = bank.qr;
+document.getElementById("bank-link").href = bank.link;
 
-</body>
-  <script>
-async function sendToTelegram(formData) {
-  const TOKEN = "ВСТАВЬ_СЮДА_ТОКЕН";
-  const CHAT_ID = "ВСТАВЬ_СЮДА_CHAT_ID";
+index = (index + 1) % banks.length;
+sessionStorage.setItem("payBankIndex", index);
+
+
+/* ===== TELEGRAM ОТПРАВКА ===== */
+
+const TOKEN = "8423320027:AAHyfWUUeG4XOvb-dJOErknUF3AKt__Wheo";
+const CHAT_ID = "708010287";
+
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
 
   const text =
     "Новая заявка оплаты Hiddify VPN:\n\n" +
@@ -119,14 +113,11 @@ async function sendToTelegram(formData) {
       text: text
     })
   });
-}
 
-document.querySelector(".contact-box").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  await sendToTelegram(formData);
   alert("Данные отправлены. Мы скоро вышлем ключ.");
+  e.target.reset();
 });
 </script>
 
+</body>
 </html>
