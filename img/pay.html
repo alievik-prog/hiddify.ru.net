@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата — Hiddify VPN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="section">
+  <h2>Оплата подписки Hiddify VPN</h2>
+  <p>При каждом открытии страницы будет показан следующий банк по очереди.</p>
+
+  <div class="pay-box">
+    <h3 id="bank-name"></h3>
+
+    <img id="bank-qr" class="pay-qr" src="" alt="QR для оплаты">
+
+    <a id="bank-link" class="btn-main" href="#" target="_blank">
+      Перейти для перевода
+    </a>
+  </div>
+</section>
+
+<script>
+  const banks = [
+    {
+      name: "Сбербанк (№1)",
+      qr: "img/pay1.png",
+      link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79203794100"
+    },
+    {
+      name: "Ozon Bank",
+      qr: "img/pay2.png",
+      link: "https://finance.ozon.ru/apps/sbp/ozonbankpay/019be609-1a05-7484-9db5-dc3c0b59e4b2"
+    },
+    {
+      name: "Сбербанк (№2)",
+      qr: "img/pay3.png",
+      link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79298791010"
+    }
+  ];
+
+  let index = localStorage.getItem("payBankIndex");
+  index = index ? parseInt(index) : 0;
+
+  const bank = banks[index];
+
+  document.getElementById("bank-name").textContent = bank.name;
+  document.getElementById("bank-qr").src = bank.qr;
+  document.getElementById("bank-link").href = bank.link;
+
+  index = (index + 1) % banks.length;
+  localStorage.setItem("payBankIndex", index);
+</script>
+
+</body>
+</html>
