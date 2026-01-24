@@ -62,6 +62,20 @@ const translations = {
     b3Text: "Используйте VPN на Android и iOS.",
 
     footer: "© 2026 Hiddify VPN. Все права защищены."
+    platformTitle: "Защитите каждое подключение",
+platformSubtitle: "Скачайте Hiddify VPN сегодня и подключите до 10 устройств с одной подпиской.",
+
+platWindows: "Windows",
+platMac: "macOS",
+platAndroid: "Android",
+platIOS: "iPhone/iPad",
+platLinux: "Linux",
+platChrome: "Chrome",
+platFirefox: "Firefox",
+platChromebook: "Chromebook",
+platAppleTV: "Apple TV",
+platAndroidTV: "Android TV",
+platFireTV: "Fire TV",
   },
 
   en: {
