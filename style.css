@@ -187,55 +187,61 @@ body {
   opacity: 0.85;
 }
 
-/* ===== PLATFORMS FINAL FIX ===== */
+/* ===== PLATFORMS FINAL PERFECT ===== */
+
+.platforms {
+  text-align: center;
+}
+
+.platform-subtitle {
+  margin-top: -15px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #666;
+  font-weight: 400;
+}
 
 .platform-grid {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 22px;
   flex-wrap: wrap;
-  margin-top: 35px;
 }
 
 .platform-card {
-  width: 85px;
-  height: 85px;
-  padding: 0;
-  border-radius: 18px;
+  width: 95px;
+  height: 95px;
+  border-radius: 20px;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   transition: 0.2s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .platform-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
+/* Все иконки одинаковые */
 .platform-img {
-  width: 46px;
-  height: 46px;
+  width: 55px;
+  height: 55px;
   object-fit: contain;
-}
-
-/* Скрываем подписи снизу через CSS */
-.platform-name {
-  display: none !important;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 700px) {
 
   .platform-card {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
   }
 
   .platform-img {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
   }
 }
 
