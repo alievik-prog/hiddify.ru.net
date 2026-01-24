@@ -3,166 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hiddify VPN — Безграничные возможности</title>
+  <title>Hiddify VPN — Безопасность и свобода</title>
 
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-    body {background:#f7f8ff;color:#111;line-height:1.6;}
-
-    header {
-      background: linear-gradient(180deg,#ffffff,#f2f3ff);
-      padding: 25px 20px 80px;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{
+      background:linear-gradient(180deg,#f6fff9,#e9fff1);
+      color:#111;
+      line-height:1.6;
     }
 
-    nav {
-      max-width: 1150px;
+    /* HEADER */
+    header{
+      padding:25px 20px 90px;
+    }
+    nav{
+      max-width:1200px;
       margin:auto;
       display:flex;
       justify-content:space-between;
       align-items:center;
     }
-
-    .logo {
-      font-weight:800;
-      font-size:20px;
-      color:#6c4cff;
+    .logo{
+      font-weight:900;
+      font-size:22px;
+      color:#0f7a3a;
     }
-
-    .menu {
+    .menu{
       display:flex;
-      gap:20px;
+      gap:18px;
       align-items:center;
+      flex-wrap:wrap;
       font-size:14px;
     }
-
-    .menu a {
+    .menu a{
       text-decoration:none;
-      color:#333;
-      font-weight:600;
+      color:#222;
+      font-weight:700;
     }
+    .menu a:hover{color:#0f7a3a;}
 
-    .menu a:hover {color:#6c4cff;}
-
-    .lang-btn {
-      border:1px solid #ccc;
+    .lang-btn{
+      border:1px solid #bbb;
       padding:6px 12px;
       border-radius:20px;
       cursor:pointer;
       background:white;
       font-size:13px;
+      font-weight:700;
     }
 
-    .hero {
-      max-width:1150px;
-      margin:60px auto 0;
+    /* HERO */
+    .hero{
+      max-width:1200px;
+      margin:70px auto 0;
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:40px;
+      gap:45px;
       align-items:center;
     }
-
-    .hero h1 {
-      font-size:52px;
+    .hero h1{
+      font-size:56px;
       font-weight:900;
       margin-bottom:15px;
     }
-
-    .hero p {
+    .hero p{
       font-size:18px;
-      color:#555;
+      color:#444;
       margin-bottom:25px;
     }
-
-    .btns {display:flex;gap:15px;flex-wrap:wrap;}
-
-    .btn {
-      padding:14px 26px;
+    .btns{display:flex;gap:15px;flex-wrap:wrap;}
+    .btn{
+      padding:14px 28px;
       border-radius:30px;
-      font-weight:700;
+      font-weight:800;
       text-decoration:none;
-      transition:0.2s;
+      transition:.2s;
       display:inline-block;
     }
-
-    .btn-primary {
-      background:#6c4cff;
+    .btn-primary{
+      background:#0f7a3a;
+      color:white;
+    }
+    .btn-primary:hover{background:#0c5f2d;}
+    .btn-outline{
+      border:2px solid #0f7a3a;
+      color:#0f7a3a;
+    }
+    .btn-outline:hover{
+      background:#0f7a3a;
       color:white;
     }
 
-    .btn-primary:hover {background:#5537e6;}
-
-    .btn-outline {
-      border:2px solid #6c4cff;
-      color:#6c4cff;
-    }
-
-    .btn-outline:hover {
-      background:#6c4cff;
-      color:white;
-    }
-
-    .hero-img {
+    .hero-img{
       width:100%;
-      height:360px;
-      border-radius:25px;
-      background: url("https://images.unsplash.com/photo-1525182008055-f88b95ff7980")
-        center/cover no-repeat;
-      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+      height:380px;
+      border-radius:26px;
+      background:url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b")
+      center/cover no-repeat;
+      box-shadow:0 12px 35px rgba(0,0,0,0.18);
     }
 
-    section {
-      max-width:1150px;
+    /* SECTIONS */
+    section{
+      max-width:1200px;
       margin:auto;
-      padding:80px 20px;
+      padding:90px 20px;
     }
-
-    h2 {
+    h2{
       text-align:center;
-      font-size:34px;
-      margin-bottom:50px;
+      font-size:36px;
+      margin-bottom:55px;
     }
 
-    .features {
+    /* FEATURES */
+    .features{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:25px;
     }
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    .card h3{color:#0f7a3a;margin-bottom:10px;}
 
-    .card {
+    /* VIDEO */
+    .video-box{
+      background:white;
+      border-radius:22px;
+      padding:40px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:center;
+      box-shadow:0 8px 22px rgba(0,0,0,0.10);
+    }
+    .video-preview{
+      height:260px;
+      border-radius:18px;
+      background:url("https://images.unsplash.com/photo-1518770660439-4636190af475")
+      center/cover no-repeat;
+    }
+
+    /* PRICING */
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+    .price-box{
+      background:white;
+      border-radius:22px;
+      padding:38px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.10);
+    }
+    .price{
+      font-size:44px;
+      font-weight:900;
+      color:#0f7a3a;
+      margin:15px 0;
+    }
+
+    /* TABLE */
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    th,td{
+      padding:16px;
+      text-align:center;
+      border-bottom:1px solid #eee;
+    }
+    th{
+      background:#0f7a3a;
+      color:white;
+      font-weight:800;
+    }
+
+    /* REVIEWS */
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+    .review{
       background:white;
       padding:28px;
       border-radius:18px;
       box-shadow:0 6px 18px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
-      margin-bottom:10px;
-      color:#6c4cff;
+    /* MAP */
+    .map-img{
+      width:100%;
+      height:340px;
+      border-radius:24px;
+      background:url("https://images.unsplash.com/photo-1502920514313-52581002a659")
+      center/cover no-repeat;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .pricing {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
-
-    .price-box {
-      background:white;
-      border-radius:20px;
-      padding:35px;
-      text-align:center;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .price-box h3 {font-size:20px;margin-bottom:15px;}
-    .price {font-size:42px;font-weight:900;color:#6c4cff;margin:15px 0;}
-
-    .faq {
-      max-width:800px;
-      margin:auto;
-    }
-
-    details {
+    /* FAQ */
+    .faq{max-width:850px;margin:auto;}
+    details{
       background:white;
       padding:18px 20px;
       border-radius:15px;
@@ -170,35 +221,37 @@
       box-shadow:0 4px 12px rgba(0,0,0,0.06);
       cursor:pointer;
     }
+    summary{font-weight:800;color:#222;}
 
-    summary {font-weight:700;color:#333;}
-
-    footer {
-      background:#111;
+    /* FOOTER */
+    footer{
+      background:#0b1c10;
       color:white;
-      padding:60px 20px;
-      margin-top:60px;
+      padding:70px 20px;
     }
-
-    footer .cols {
-      max-width:1150px;
+    footer .cols{
+      max-width:1200px;
       margin:auto;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
       gap:25px;
     }
+    footer h4{margin-bottom:12px;color:#3cff8f;}
+    footer a{
+      color:white;
+      text-decoration:none;
+      opacity:0.75;
+      font-size:14px;
+    }
+    footer a:hover{opacity:1;}
+    footer p{text-align:center;margin-top:45px;opacity:0.6;font-size:13px;}
 
-    footer h4 {margin-bottom:12px;color:#6c4cff;}
-    footer a {color:white;text-decoration:none;opacity:0.7;font-size:14px;}
-    footer a:hover {opacity:1;}
-
-    footer p {text-align:center;margin-top:40px;opacity:0.6;font-size:13px;}
-
-    /* Mobile */
+    /* MOBILE */
     @media(max-width:900px){
-      .hero {grid-template-columns:1fr;}
-      .hero-img {height:260px;}
-      nav {flex-direction:column;gap:15px;}
+      .hero{grid-template-columns:1fr;}
+      .video-box{grid-template-columns:1fr;}
+      .hero-img{height:260px;}
+      nav{flex-direction:column;gap:15px;}
     }
   </style>
 </head>
@@ -208,94 +261,55 @@
 <header>
   <nav>
     <div class="logo">Hiddify VPN</div>
-
     <div class="menu">
-      <a href="#features" data-ru="Возможности" data-en="Features">Возможности</a>
-      <a href="#pricing" data-ru="Тарифы" data-en="Pricing">Тарифы</a>
-      <a href="#faq" data-ru="Вопросы" data-en="FAQ">Вопросы</a>
-      <a href="#" data-ru="Войти" data-en="Login">Войти</a>
+      <a href="#features">Возможности</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#compare">Сравнение</a>
+      <a href="#faq">FAQ</a>
+      <a href="#">Войти</a>
+      <a href="#" class="btn btn-outline">Регистрация</a>
       <button class="lang-btn" onclick="toggleLang()">RU / EN</button>
     </div>
   </nav>
 
   <div class="hero">
     <div>
-      <h1 data-ru="Один VPN. Безграничные возможности."
-          data-en="One VPN. Unlimited possibilities.">
-        Один VPN. Безграничные возможности.
-      </h1>
-
-      <p data-ru="Hiddify VPN обеспечивает свободу интернета, безопасность и максимальную скорость в любой стране."
-         data-en="Hiddify VPN provides online freedom, security, and maximum speed anywhere in the world.">
-        Hiddify VPN обеспечивает свободу интернета, безопасность и максимальную скорость в любой стране.
-      </p>
-
+      <h1>Один VPN. Полная свобода.</h1>
+      <p>Hiddify VPN защищает ваши данные, открывает доступ к любым сайтам и работает на всех устройствах.</p>
       <div class="btns">
-        <a href="#pricing" class="btn btn-primary"
-           data-ru="Попробовать бесплатно"
-           data-en="Try for free">Попробовать бесплатно</a>
-
-        <a href="#pricing" class="btn btn-outline"
-           data-ru="Купить VPN"
-           data-en="Get VPN">Купить VPN</a>
+        <a href="#pricing" class="btn btn-primary">Попробовать бесплатно</a>
+        <a href="#pricing" class="btn btn-outline">Купить VPN</a>
       </div>
     </div>
-
     <div class="hero-img"></div>
   </div>
 </header>
 
 <section id="features">
-  <h2 data-ru="Почему выбирают Hiddify VPN?"
-      data-en="Why choose Hiddify VPN?">
-    Почему выбирают Hiddify VPN?
-  </h2>
-
+  <h2>Все возможности Hiddify VPN</h2>
   <div class="features">
-    <div class="card">
-      <h3 data-ru="Обходит блокировки" data-en="Bypass censorship">Обходит блокировки</h3>
-      <p data-ru="Доступ к любым сайтам и сервисам без ограничений."
-         data-en="Access any websites and services without restrictions."></p>
-    </div>
+    <div class="card"><h3>Обход блокировок</h3><p>Открывает доступ к любым ресурсам.</p></div>
+    <div class="card"><h3>Анонимность</h3><p>Полная защита трафика и данных.</p></div>
+    <div class="card"><h3>Максимальная скорость</h3><p>Без лимитов и ограничений.</p></div>
+    <div class="card"><h3>Поддержка 24/7</h3><p>Мы всегда рядом.</p></div>
+    <div class="card"><h3>Мульти-устройства</h3><p>Работает на телефоне и ПК.</p></div>
+    <div class="card"><h3>Сервера по миру</h3><p>Стабильный доступ из любой страны.</p></div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3 data-ru="Полная анонимность" data-en="Full privacy">Полная анонимность</h3>
-      <p data-ru="Ваши данные защищены современным шифрованием."
-         data-en="Your data is protected with modern encryption."></p>
+<section>
+  <h2>Видео-обзор сервиса</h2>
+  <div class="video-box">
+    <div>
+      <h3>Как работает Hiddify VPN?</h3>
+      <p>Подключение занимает меньше минуты. Вы получаете безопасность, скорость и свободу.</p>
     </div>
-
-    <div class="card">
-      <h3 data-ru="Максимальная скорость" data-en="Maximum speed">Максимальная скорость</h3>
-      <p data-ru="Стабильный VPN без просадок и ограничений."
-         data-en="Stable VPN without slowdowns or limits."></p>
-    </div>
-
-    <div class="card">
-      <h3 data-ru="Подключение за минуту" data-en="Connect in 1 minute">Подключение за минуту</h3>
-      <p data-ru="Простая настройка на телефоне и ПК."
-         data-en="Easy setup on mobile and desktop."></p>
-    </div>
-
-    <div class="card">
-      <h3 data-ru="Работает везде" data-en="Works everywhere">Работает везде</h3>
-      <p data-ru="Сервера по всему миру для стабильного доступа."
-         data-en="Servers worldwide for stable access."></p>
-    </div>
-
-    <div class="card">
-      <h3 data-ru="Поддержка 24/7" data-en="24/7 Support">Поддержка 24/7</h3>
-      <p data-ru="Мы всегда поможем вам подключиться."
-         data-en="We are always ready to help you connect."></p>
-    </div>
+    <div class="video-preview"></div>
   </div>
 </section>
 
 <section id="pricing">
-  <h2 data-ru="Выберите тариф Hiddify VPN Plus"
-      data-en="Choose your Hiddify VPN plan">
-    Выберите тариф Hiddify VPN Plus
-  </h2>
-
+  <h2>Тарифы Hiddify VPN Plus</h2>
   <div class="pricing">
     <div class="price-box">
       <h3>1 месяц</h3>
@@ -303,14 +317,12 @@
       <p>Идеально для теста</p>
       <a href="#" class="btn btn-primary">Выбрать</a>
     </div>
-
     <div class="price-box">
       <h3>12 месяцев</h3>
       <div class="price">2200 ₽</div>
       <p>Самый популярный</p>
       <a href="#" class="btn btn-primary">Выбрать</a>
     </div>
-
     <div class="price-box">
       <h3>24 месяца</h3>
       <div class="price">2400 ₽</div>
@@ -320,27 +332,38 @@
   </div>
 </section>
 
+<section id="compare">
+  <h2>Сравнение тарифов</h2>
+  <table>
+    <tr><th>Функция</th><th>Free</th><th>Plus</th></tr>
+    <tr><td>Скорость</td><td>Ограничена</td><td>Максимальная</td></tr>
+    <tr><td>Страны</td><td>3</td><td>50+</td></tr>
+    <tr><td>Поддержка</td><td>Нет</td><td>24/7</td></tr>
+    <tr><td>Устройства</td><td>1</td><td>5+</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Отзывы пользователей</h2>
+  <div class="reviews">
+    <div class="review"><b>Алексей</b><p>Лучший VPN, который реально работает.</p></div>
+    <div class="review"><b>Мария</b><p>Скорость отличная, подключение простое.</p></div>
+    <div class="review"><b>Илья</b><p>Наконец-то доступ к любым сайтам без проблем.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Сервера по всему миру</h2>
+  <div class="map-img"></div>
+</section>
+
 <section id="faq">
-  <h2 data-ru="Частые вопросы" data-en="Frequently Asked Questions">Частые вопросы</h2>
-
+  <h2>FAQ</h2>
   <div class="faq">
-    <details>
-      <summary data-ru="Что такое Hiddify VPN?" data-en="What is Hiddify VPN?">Что такое Hiddify VPN?</summary>
-      <p>Это современный VPN-сервис для свободы и безопасности в интернете.</p>
-    </details>
-
-    <details>
-      <summary data-ru="Работает ли на телефоне?" data-en="Does it work on mobile?">Работает ли на телефоне?</summary>
-      <p>Да, поддерживаются Android, iOS, Windows и macOS.</p>
-    </details>
-
-    <details>
-      <summary data-ru="Можно ли подключить несколько устройств?"
-               data-en="Can I connect multiple devices?">
-        Можно ли подключить несколько устройств?
-      </summary>
-      <p>Да, один аккаунт можно использовать на нескольких устройствах.</p>
-    </details>
+    <details><summary>Что такое Hiddify VPN?</summary><p>Это сервис для защиты и свободы в интернете.</p></details>
+    <details><summary>Работает ли на телефоне?</summary><p>Да, Android и iOS поддерживаются.</p></details>
+    <details><summary>Можно ли подключить несколько устройств?</summary><p>Да, до 5+ устройств.</p></details>
+    <details><summary>Есть ли пробный период?</summary><p>Да, вы можете попробовать бесплатно.</p></details>
   </div>
 </section>
 
@@ -352,34 +375,24 @@
       <a href="#">Безопасность</a><br/>
       <a href="#">Контакты</a>
     </div>
-
     <div>
       <h4>Продукт</h4>
       <a href="#">Приложения</a><br/>
       <a href="#">Тарифы</a><br/>
       <a href="#">FAQ</a>
     </div>
-
     <div>
       <h4>Поддержка</h4>
-      <a href="#">Центр помощи</a><br/>
       <a href="#">Telegram</a><br/>
       <a href="#">Email</a>
     </div>
   </div>
-
   <p>© 2026 Hiddify VPN. Все права защищены.</p>
 </footer>
 
 <script>
-  let currentLang = "ru";
-
   function toggleLang(){
-    currentLang = currentLang === "ru" ? "en" : "ru";
-
-    document.querySelectorAll("[data-ru]").forEach(el=>{
-      el.textContent = el.getAttribute("data-" + currentLang);
-    });
+    alert("Перевод на английский добавим следующим шагом полностью.");
   }
 </script>
 
