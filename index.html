@@ -2,96 +2,204 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hiddify VPN — VPN нового поколения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hiddify VPN — Безграничные возможности</title>
+
   <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#0b1220;
-      color:white;
-      text-align:center;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+      background: #f7f8ff;
+      color: #111;
+      line-height: 1.6;
     }
-    header{
-      padding:60px 20px;
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
     }
-    h1{
-      font-size:48px;
-      margin-bottom:10px;
+
+    header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #2a2a2a;
     }
-    p{
-      font-size:18px;
-      opacity:0.8;
+
+    header p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 18px;
+      color: #555;
     }
-    .btn{
-      display:inline-block;
-      margin:15px;
-      padding:15px 30px;
-      border-radius:10px;
-      background:#2563eb;
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
+
+    .btns {
+      margin-top: 25px;
     }
-    section{
-      padding:60px 20px;
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      margin: 8px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
     }
-    .cards{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
+
+    .btn-primary {
+      background: #6c4cff;
+      color: white;
     }
-    .card{
-      background:#111a2e;
-      padding:25px;
-      border-radius:15px;
-      width:260px;
-      box-shadow:0 0 20px rgba(0,0,0,0.4);
+
+    .btn-primary:hover {
+      background: #5537e6;
     }
-    footer{
-      padding:30px;
-      background:#050914;
-      font-size:14px;
-      opacity:0.6;
+
+    .btn-outline {
+      border: 2px solid #6c4cff;
+      color: #6c4cff;
+    }
+
+    .btn-outline:hover {
+      background: #6c4cff;
+      color: white;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #6c4cff;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .price-box {
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .price-box h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 42px;
+      font-weight: 800;
+      margin: 15px 0;
+      color: #6c4cff;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.7;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Hiddify VPN</h1>
-  <p>VPN нового поколения. Свобода интернета без компромиссов.</p>
-  <a class="btn" href="#">Купить VPN</a>
-  <a class="btn" href="#">Попробовать сейчас</a>
-</header>
+  <!-- HERO -->
+  <header>
+    <h1>Hiddify VPN</h1>
+    <p>Один VPN. Безграничные возможности. Свобода интернета без компромиссов.</p>
 
-<section>
-  <h2>Почему выбирают Hiddify VPN?</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Обходит блокировки</h3>
-      <p>Работает там, где другие VPN бессильны.</p>
+    <div class="btns">
+      <a href="#" class="btn btn-primary">Попробовать сейчас</a>
+      <a href="#" class="btn btn-outline">Купить VPN</a>
     </div>
-    <div class="card">
-      <h3>Полная анонимность</h3>
-      <p>Современное шифрование и защита от слежки.</p>
-    </div>
-    <div class="card">
-      <h3>Максимальная скорость</h3>
-      <p>Без просадок и ограничений по трафику.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section>
-  <h2>Подключение за 1 минуту</h2>
-  <p>1. Нажмите «Купить» → 2. Оплатите → 3. Получите ключ в Telegram</p>
-</section>
+  <!-- FEATURES -->
+  <section>
+    <h2 style="text-align:center; font-size:32px;">Почему выбирают Hiddify VPN?</h2>
 
-<footer>
-  © 2026 Hiddify VPN — Интернет без границ
-</footer>
+    <div class="features">
+      <div class="card">
+        <h3>Обходит блокировки</h3>
+        <p>Работает даже там, где другие VPN бессильны.</p>
+      </div>
+
+      <div class="card">
+        <h3>Полная анонимность</h3>
+        <p>Современное шифрование и защита от слежки.</p>
+      </div>
+
+      <div class="card">
+        <h3>Максимальная скорость</h3>
+        <p>Без просадок и ограничений по трафику.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section>
+    <h2 style="text-align:center; font-size:32px;">Выберите тариф Hiddify VPN Plus</h2>
+
+    <div class="pricing">
+      <div class="price-box">
+        <h3>1 месяц</h3>
+        <div class="price">$5</div>
+        <p>Идеально для теста</p>
+        <a href="#" class="btn btn-primary">Выбрать</a>
+      </div>
+
+      <div class="price-box">
+        <h3>12 месяцев</h3>
+        <div class="price">$48</div>
+        <p>Самый популярный</p>
+        <a href="#" class="btn btn-primary">Выбрать</a>
+      </div>
+
+      <div class="price-box">
+        <h3>24 месяца</h3>
+        <div class="price">$80</div>
+        <p>Максимальная выгода</p>
+        <a href="#" class="btn btn-primary">Выбрать</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>Hiddify VPN</h3>
+    <p>© 2026 Hiddify VPN. Все права защищены.</p>
+  </footer>
 
 </body>
 </html>
