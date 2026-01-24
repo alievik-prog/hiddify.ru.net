@@ -211,3 +211,12 @@ body {
     gap: 15px;
   }
 }
+/* FIX: отступ между текстом и кнопкой в тарифах */
+.price-card p {
+  margin-bottom: 20px;
+}
+
+.price-card .btn-main {
+  display: inline-block;
+  margin-top: 10px;
+}
