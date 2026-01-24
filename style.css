@@ -307,3 +307,28 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  gap: 12px;
+}
+
+.platform-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.platform-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.platform-card:hover {
+  transform: translateY(-4px);
+}
