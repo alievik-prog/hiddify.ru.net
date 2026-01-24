@@ -100,9 +100,9 @@ const translations = {
     pricingTitle: "Choose your Hiddify VPN Plus plan",
     p1Title: "1 month",
     p1Text: "Perfect for testing",
-    p2Title: "12 months",
+    p2Title: "6 months",
     p2Text: "Best offer",
-    p3Title: "24 months",
+    p3Title: "12 months",
     p3Text: "Maximum savings",
     btnChoose: "Select",
 
