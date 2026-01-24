@@ -412,3 +412,46 @@ body {
     height: 220px;
   }
 }
+/* ===== PRICING BUTTON COLORS ===== */
+
+.btn-plan {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
+  color: white;
+}
+
+/* Жёлтая кнопка (200 ₽) */
+.btn-yellow {
+  background: #facc15;
+  color: #111;
+}
+
+.btn-yellow:hover {
+  background: #fde047;
+  transform: translateY(-3px);
+}
+
+/* Сиреневая кнопка (1000 ₽) */
+.btn-purple {
+  background: #4f46e5;
+}
+
+.btn-purple:hover {
+  background: #6d63ff;
+  transform: translateY(-3px);
+}
+
+/* Зелёная кнопка (1800 ₽) */
+.btn-green {
+  background: #16a34a;
+}
+
+.btn-green:hover {
+  background: #22c55e;
+  transform: translateY(-3px);
+}
