@@ -187,43 +187,55 @@ body {
   opacity: 0.85;
 }
 
-/* ===== PLATFORMS ===== */
+/* ===== PLATFORMS FIX (SMALL ICONS) ===== */
 
 .platform-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
   justify-content: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .platform-card {
-  width: 110px;
-  padding: 18px 12px;
-  border-radius: 18px;
+  width: auto;
+  padding: 12px;
+  border-radius: 16px;
   background: white;
   text-align: center;
-  cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .platform-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .platform-img {
-  width: 64px;
-  height: 64px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-  border-radius: 16px;
 }
 
-.platform-name {
-  font-size: 16px;
-  font-weight: 600;
-  color: #111;
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 700px) {
+
+  .platform-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .platform-img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ===== FAQ ===== */
