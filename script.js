@@ -141,6 +141,20 @@ platFireTV: "Fire TV",
     b3Text: "Use VPN on Android and iOS.",
 
     footer: "© 2026 Hiddify VPN. All rights reserved."
+  platformTitle: "Protect every connection",
+platformSubtitle: "Download Hiddify VPN today and connect up to 10 devices with one subscription.",
+
+platWindows: "Windows",
+platMac: "macOS",
+platAndroid: "Android",
+platIOS: "iPhone/iPad",
+platLinux: "Linux",
+platChrome: "Chrome",
+platFirefox: "Firefox",
+platChromebook: "Chromebook",
+platAppleTV: "Apple TV",
+platAndroidTV: "Android TV",
+platFireTV: "Fire TV",
   }
 };
 
