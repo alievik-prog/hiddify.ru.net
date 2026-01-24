@@ -51,9 +51,9 @@ const translations = {
     pricingTitle: "Выберите тариф Hiddify VPN Plus",
     p1Title: "1 месяц",
     p1Text: "Идеально для теста",
-    p2Title: "12 месяцев",
+    p2Title: "6 месяцев",
     p2Text: "Лучшее предложение",
-    p3Title: "24 месяца",
+    p3Title: "12 месяца",
     p3Text: "Максимальная выгода",
     btnChoose: "Выбрать",
 
