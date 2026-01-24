@@ -12,7 +12,8 @@ const translations = {
     btnGetVpn: "Получить VPN",
 
     title: "Один VPN.\nБезграничные возможности.",
-    subtitle: "Hiddify VPN защищает вашу приватность, ускоряет соединение и помогает обходить блокировки по всему миру.",
+    subtitle:
+      "Hiddify VPN защищает вашу приватность, ускоряет соединение и помогает обходить блокировки по всему миру.",
 
     btnFree: "Попробовать бесплатно",
     btnBuy: "Купить VPN",
@@ -41,7 +42,8 @@ const translations = {
     btnChoose: "Выбрать",
 
     compareTitle: "Сравнение с другими VPN",
-    compareText: "Hiddify VPN предлагает максимальную безопасность и скорость по сравнению с конкурентами.",
+    compareText:
+      "Hiddify VPN предлагает максимальную безопасность и скорость по сравнению с конкурентами.",
 
     faqTitle: "Частые вопросы",
     q1: "Как подключиться?",
@@ -75,7 +77,8 @@ const translations = {
     btnGetVpn: "Get VPN",
 
     title: "One VPN.\nUnlimited possibilities.",
-    subtitle: "Hiddify VPN protects your privacy, speeds up your connection, and helps bypass restrictions worldwide.",
+    subtitle:
+      "Hiddify VPN protects your privacy, speeds up your connection, and helps bypass restrictions worldwide.",
 
     btnFree: "Try for free",
     btnBuy: "Get VPN",
@@ -104,7 +107,8 @@ const translations = {
     btnChoose: "Select",
 
     compareTitle: "Comparison with other VPNs",
-    compareText: "Hiddify VPN delivers top security and speed compared to competitors.",
+    compareText:
+      "Hiddify VPN delivers top security and speed compared to competitors.",
 
     faqTitle: "Frequently Asked Questions",
     q1: "How do I connect?",
@@ -127,7 +131,7 @@ const translations = {
 };
 
 function setLanguage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang][key]) {
       el.textContent = translations[lang][key];
@@ -136,8 +140,13 @@ function setLanguage(lang) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("lang-ru").onclick = () => setLanguage("ru");
-  document.getElementById("lang-en").onclick = () => setLanguage("en");
+  const ruBtn = document.getElementById("lang-ru");
+  const enBtn = document.getElementById("lang-en");
+
+  if (ruBtn && enBtn) {
+    ruBtn.addEventListener("click", () => setLanguage("ru"));
+    enBtn.addEventListener("click", () => setLanguage("en"));
+  }
 
   setLanguage("ru");
 });
