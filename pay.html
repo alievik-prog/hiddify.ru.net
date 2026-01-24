@@ -1,97 +1,102 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оплата — Hiddify VPN</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+/* ===== PAY PAGE FIX (2026) ===== */
 
-<body>
+.pay-box h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
 
-<section class="section">
-  <h2>Оплата подписки Hiddify VPN</h2>
+#bank-link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 35px; /* чтобы не прилипало к "После оплаты" */
+  padding: 14px 22px;
+  font-size: 15px;
+  text-align: center;
+  max-width: 90%;
+  white-space: normal; /* кнопка красиво переносится */
+  line-height: 1.3;
+}
 
-  <div class="pay-box">
+/* Блок "После оплаты" */
+.after-pay {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f3f4ff;
+}
 
-    <!-- ===== СБЕРБАНК QR ===== -->
-    <h3>Наведите камерой на QR-код для оплаты</h3>
+.after-pay h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
-    <img id="bank-qr" class="pay-qr" src="" alt="QR для оплаты">
+.after-pay p {
+  font-size: 15px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
 
-    <a id="bank-link" class="btn-main" href="#" target="_blank">
-      Перейти в Сбербанк для перевода
-    </a>
+/* Telegram + WhatsApp сетка */
+.messenger-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ДВА в ряд */
+  gap: 25px;
+  margin-top: 20px;
+}
 
-    <!-- ===== ПОСЛЕ ОПЛАТЫ ===== -->
-    <div class="after-pay">
-      <h3>После оплаты свяжитесь с нами</h3>
-      <p>
-        Напишите нам в Telegram или WhatsApp, чтобы получить ключ доступа.
-      </p>
-    </div>
+/* Карточки */
+.messenger-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
 
-    <!-- ===== TELEGRAM + WHATSAPP ===== -->
-    <div class="messenger-grid">
+.messenger-card h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
 
-      <!-- TELEGRAM -->
-      <div class="messenger-card">
-        <h4>Telegram</h4>
+/* QR внутри карточек */
+.pay-qr.small {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 18px;
+}
 
-        <img src="img/telegram-qr.png" class="pay-qr small"
-             alt="QR Telegram">
+/* Кнопки Telegram/WhatsApp */
+.messenger-card a {
+  display: inline-block;
+  width: 100%;
+  max-width: 220px;
+  padding: 12px 16px;
+  font-size: 15px;
+  margin-top: 5px;
+}
 
-        <a class="btn-outline"
-           href="https://t.me/shamil_alidamadaev?text=Хочу%20узнать%20про%20Hiddify%20VPN"
-           target="_blank">
-          Перейти в Telegram
-        </a>
-      </div>
+/* ===== MOBILE FIX ===== */
+@media (max-width: 700px) {
 
-      <!-- WHATSAPP -->
-      <div class="messenger-card">
-        <h4>WhatsApp</h4>
-
-        <img src="img/whatsapp-qr.png" class="pay-qr small"
-             alt="QR WhatsApp">
-
-        <a class="btn-outline"
-           href="https://wa.me/79298791010?text=Хочу%20узнать%20про%20Hiddify%20VPN"
-           target="_blank">
-          Перейти в WhatsApp
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<script>
-/* ===== QR ОПЛАТЫ (СБЕР) ПО ОЧЕРЕДИ ===== */
-
-const banks = [
-  {
-    qr: "img/pay1.png",
-    link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79203794100"
-  },
-  {
-    qr: "img/pay3.png",
-    link: "https://www.sberbank.com/sms/pbpn?requisiteNumber=79298791010"
+  /* Кнопка Сбер */
+  #bank-link {
+    width: 100%;
+    font-size: 14px;
+    padding: 14px 10px;
   }
-];
 
-let index = sessionStorage.getItem("payBankIndex");
-index = index ? parseInt(index) : 0;
+  /* Telegram и WhatsApp в столбик */
+  .messenger-grid {
+    grid-template-columns: 1fr;
+  }
 
-const bank = banks[index];
+  .messenger-card {
+    width: 100%;
+  }
 
-document.getElementById("bank-qr").src = bank.qr;
-document.getElementById("bank-link").href = bank.link;
-
-index = (index + 1) % banks.length;
-sessionStorage.setItem("payBankIndex", index);
-</script>
-
-</body>
-</html>
+  .pay-qr.small {
+    width: 220px;
+    height: 220px;
+  }
+}
