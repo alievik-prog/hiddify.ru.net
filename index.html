@@ -6,7 +6,6 @@
   <title>Hiddify VPN</title>
 
   <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
 
@@ -15,18 +14,20 @@
   <div class="logo">Hiddify VPN</div>
 
   <nav class="nav">
-    <a href="#features">Преимущества</a>
-    <a href="#pricing">Цены</a>
-    <a href="#compare">Сравнение</a>
-    <a href="#faq">FAQ</a>
-    <a href="#blog">Блог</a>
+    <a href="#features" data-i18n="navFeatures">Преимущества</a>
+    <a href="#pricing" data-i18n="navPricing">Цены</a>
+    <a href="#compare" data-i18n="navCompare">Сравнение</a>
+    <a href="#faq" data-i18n="navFaq">FAQ</a>
+    <a href="#blog" data-i18n="navBlog">Блог</a>
   </nav>
 
   <div class="header-actions">
+    <span class="lang-label" data-i18n="langLabel">Сменить язык:</span>
     <button class="lang-btn" id="lang-ru">RU</button>
-<button class="lang-btn" id="lang-en">EN</button>
-    <a class="btn-outline" href="#">Войти</a>
-    <a class="btn-main" href="#">Получить VPN</a>
+    <button class="lang-btn" id="lang-en">EN</button>
+
+    <a class="btn-outline" href="#" data-i18n="btnLogin">Войти</a>
+    <a class="btn-main" href="#" data-i18n="btnGetVpn">Получить VPN</a>
   </div>
 </header>
 
@@ -35,14 +36,14 @@
   <div class="hero-text">
     <h1 data-i18n="title">Один VPN.<br>Безграничные возможности.</h1>
 
-<p data-i18n="subtitle">
-  Hiddify VPN защищает вашу приватность, ускоряет соединение
-  и помогает обходить блокировки по всему миру.
-</p>
+    <p data-i18n="subtitle">
+      Hiddify VPN защищает вашу приватность, ускоряет соединение
+      и помогает обходить блокировки по всему миру.
+    </p>
 
     <div class="hero-buttons">
       <a class="btn-main" href="#" data-i18n="btnFree">Попробовать бесплатно</a>
-<a class="btn-outline" href="#" data-i18n="btnBuy">Купить VPN</a>
+      <a class="btn-outline" href="#" data-i18n="btnBuy">Купить VPN</a>
     </div>
   </div>
 
@@ -53,161 +54,125 @@
 
 <!-- FEATURES -->
 <section id="features" class="section">
-  <h2>Почему выбирают Hiddify VPN?</h2>
+  <h2 data-i18n="featuresTitle">Почему выбирают Hiddify VPN?</h2>
 
   <div class="grid-3">
     <div class="card">
-      <h3>Обходит блокировки</h3>
-      <p>Работает там, где другие VPN бессильны.</p>
+      <h3 data-i18n="f1Title">Обходит блокировки</h3>
+      <p data-i18n="f1Text">Работает там, где другие VPN бессильны.</p>
     </div>
+
     <div class="card">
-      <h3>Полная анонимность</h3>
-      <p>Современное шифрование и защита от слежки.</p>
+      <h3 data-i18n="f2Title">Полная анонимность</h3>
+      <p data-i18n="f2Text">Современное шифрование и защита от слежки.</p>
     </div>
+
     <div class="card">
-      <h3>Максимальная скорость</h3>
-      <p>Без просадок и ограничений по трафику.</p>
+      <h3 data-i18n="f3Title">Максимальная скорость</h3>
+      <p data-i18n="f3Text">Без просадок и ограничений по трафику.</p>
     </div>
+
     <div class="card">
-      <h3>До 10 устройств</h3>
-      <p>Одна подписка для телефона, ноутбука и ТВ.</p>
+      <h3 data-i18n="f4Title">До 10 устройств</h3>
+      <p data-i18n="f4Text">Одна подписка для телефона, ноутбука и ТВ.</p>
     </div>
+
     <div class="card">
-      <h3>Блокировка рекламы</h3>
-      <p>Встроенный фильтр рекламы и трекеров.</p>
+      <h3 data-i18n="f5Title">Блокировка рекламы</h3>
+      <p data-i18n="f5Text">Встроенный фильтр рекламы и трекеров.</p>
     </div>
+
     <div class="card">
-      <h3>Глобальная сеть серверов</h3>
-      <p>Тысячи серверов по всему миру.</p>
+      <h3 data-i18n="f6Title">Глобальная сеть серверов</h3>
+      <p data-i18n="f6Text">Тысячи серверов по всему миру.</p>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section id="pricing" class="section alt">
-  <h2>Выберите тариф Hiddify VPN Plus</h2>
+  <h2 data-i18n="pricingTitle">Выберите тариф Hiddify VPN Plus</h2>
 
   <div class="grid-3">
     <div class="price-card">
-      <h3>1 месяц</h3>
+      <h3 data-i18n="p1Title">1 месяц</h3>
       <div class="price">150 ₽</div>
-      <p>Идеально для теста</p>
-      <a href="#" class="btn-main">Выбрать</a>
+      <p data-i18n="p1Text">Идеально для теста</p>
+      <a href="#" class="btn-main" data-i18n="btnChoose">Выбрать</a>
     </div>
 
     <div class="price-card featured">
-      <h3>12 месяцев</h3>
+      <h3 data-i18n="p2Title">12 месяцев</h3>
       <div class="price">2200 ₽</div>
-      <p>Лучшее предложение</p>
-      <a href="#" class="btn-main">Выбрать</a>
+      <p data-i18n="p2Text">Лучшее предложение</p>
+      <a href="#" class="btn-main" data-i18n="btnChoose">Выбрать</a>
     </div>
 
     <div class="price-card">
-      <h3>24 месяца</h3>
+      <h3 data-i18n="p3Title">24 месяца</h3>
       <div class="price">2400 ₽</div>
-      <p>Максимальная выгода</p>
-      <a href="#" class="btn-main">Выбрать</a>
+      <p data-i18n="p3Text">Максимальная выгода</p>
+      <a href="#" class="btn-main" data-i18n="btnChoose">Выбрать</a>
     </div>
   </div>
 </section>
 
 <!-- COMPARE -->
 <section id="compare" class="section">
-  <h2>Сравнение с другими VPN</h2>
+  <h2 data-i18n="compareTitle">Сравнение с другими VPN</h2>
 
-  <div class="compare-table">
-    <div class="compare-header">
-      <span>Функции</span>
-      <span class="highlight">Hiddify VPN</span>
-      <span>ExpressVPN</span>
-      <span>CyberGhost</span>
-      <span>NordVPN</span>
-      <span>Surfshark</span>
-    </div>
-
-    <div class="compare-row">
-      <span>Проверенный аудит</span>
-      <span>✔</span><span>✖</span><span>✖</span><span>✖</span><span>✖</span>
-    </div>
-    <div class="compare-row">
-      <span>Блокировка рекламы</span>
-      <span>✔</span><span>✔</span><span>✔</span><span>✔</span><span>✔</span>
-    </div>
-    <div class="compare-row">
-      <span>Максимальная скорость</span>
-      <span>✔</span><span>✖</span><span>✖</span><span>✔</span><span>✔</span>
-    </div>
-  </div>
-</section>
-
-<!-- COMMUNITY -->
-<section class="section alt">
-  <h2>Нам доверяют пользователи</h2>
-
-  <div class="grid-3">
-    <div class="card">
-      <h3>★★★★★</h3>
-      <p>Отличный VPN, стабильный и быстрый.</p>
-      <strong>Алексей</strong>
-    </div>
-    <div class="card">
-      <h3>★★★★★</h3>
-      <p>Подключение простое, всё работает идеально.</p>
-      <strong>Мария</strong>
-    </div>
-    <div class="card">
-      <h3>★★★★★</h3>
-      <p>Лучший VPN для конфиденциальности.</p>
-      <strong>Дмитрий</strong>
-    </div>
-  </div>
+  <p data-i18n="compareText">
+    Hiddify VPN предлагает максимальную безопасность и скорость по сравнению с конкурентами.
+  </p>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="section">
-  <h2>Частые вопросы</h2>
+  <h2 data-i18n="faqTitle">Частые вопросы</h2>
 
   <div class="faq">
     <details>
-      <summary>Как подключиться?</summary>
-      <p>Выберите тариф, получите ключ и подключитесь за 1 минуту.</p>
+      <summary data-i18n="q1">Как подключиться?</summary>
+      <p data-i18n="a1">Выберите тариф, получите ключ и подключитесь за 1 минуту.</p>
     </details>
 
     <details>
-      <summary>Есть ли бесплатный тест?</summary>
-      <p>Да, вы можете попробовать бесплатно перед покупкой.</p>
+      <summary data-i18n="q2">Есть ли бесплатный тест?</summary>
+      <p data-i18n="a2">Да, вы можете попробовать бесплатно перед покупкой.</p>
     </details>
 
     <details>
-      <summary>Сколько устройств поддерживается?</summary>
-      <p>До 10 устройств на одной подписке.</p>
+      <summary data-i18n="q3">Сколько устройств поддерживается?</summary>
+      <p data-i18n="a3">До 10 устройств на одной подписке.</p>
     </details>
   </div>
 </section>
 
 <!-- BLOG -->
 <section id="blog" class="section alt">
-  <h2>Блог Hiddify VPN</h2>
+  <h2 data-i18n="blogTitle">Блог Hiddify VPN</h2>
 
   <div class="grid-3">
     <div class="card">
-      <h3>Почему важна приватность?</h3>
-      <p>Как VPN защищает ваши данные в интернете.</p>
+      <h3 data-i18n="b1Title">Почему важна приватность?</h3>
+      <p data-i18n="b1Text">Как VPN защищает ваши данные в интернете.</p>
     </div>
+
     <div class="card">
-      <h3>VPN для стриминга</h3>
-      <p>Открывайте доступ к контенту по всему миру.</p>
+      <h3 data-i18n="b2Title">VPN для стриминга</h3>
+      <p data-i18n="b2Text">Открывайте доступ к контенту по всему миру.</p>
     </div>
+
     <div class="card">
-      <h3>VPN на телефоне</h3>
-      <p>Используйте VPN на Android и iOS.</p>
+      <h3 data-i18n="b3Title">VPN на телефоне</h3>
+      <p data-i18n="b3Text">Используйте VPN на Android и iOS.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 Hiddify VPN. Все права защищены.</p>
+  <p data-i18n="footer">© 2026 Hiddify VPN. Все права защищены.</p>
 </footer>
 
 <script src="script.js"></script>
