@@ -486,3 +486,44 @@ body {
   max-width: 720px;
   border-radius: 14px;
 }
+.after-pay {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #f3f4ff;
+}
+
+.after-pay h3 {
+  margin-bottom: 10px;
+}
+
+.after-pay p {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.messenger-grid {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.messenger-card {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.messenger-card h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.pay-qr.small {
+  width: 200px;
+  height: 200px;
+}
