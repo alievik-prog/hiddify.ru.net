@@ -19,7 +19,28 @@
     <a id="bank-link" class="btn-main" href="#" target="_blank">
       Перейти в Сбербанк для перевода
     </a>
-    <form class="contact-box" action="https://formspree.io/f/xrepoonk" method="POST">
+    <div class="contact-box">
+  <h4>После оплаты отправьте данные для получения ключа</h4>
+
+  <input id="firstname" placeholder="Имя *" required>
+  <input id="lastname" placeholder="Фамилия *" required>
+
+  <input id="senderphone" placeholder="Номер телефона, с которого оплатили *" required>
+
+  <input id="contactphone" placeholder="Ваш номер для связи *" required>
+
+  <input id="email" placeholder="Email (необязательно)">
+  <input id="telegram" placeholder="Telegram или WhatsApp (необязательно)">
+
+  <button class="btn-main" onclick="sendToTelegram()">
+    Отправить данные
+  </button>
+
+  <p class="contact-note">
+    Мы вышлем ключ после подтверждения оплаты.
+  </p>
+</div>
+
  <h4>
   После оплаты, пожалуйста, оставьте ваши контактные данные, чтобы мы могли отправить вам ключ доступа.
   Укажите имя, фамилию, номер телефона отправителя и удобный способ связи (WhatsApp/Telegram/MAX).
@@ -76,4 +97,36 @@
 </script>
 
 </body>
+  <script>
+async function sendToTelegram(formData) {
+  const TOKEN = "ВСТАВЬ_СЮДА_ТОКЕН";
+  const CHAT_ID = "ВСТАВЬ_СЮДА_CHAT_ID";
+
+  const text =
+    "Новая заявка оплаты Hiddify VPN:\n\n" +
+    "Имя: " + formData.get("firstname") + "\n" +
+    "Фамилия: " + formData.get("lastname") + "\n" +
+    "Телефон отправителя: " + formData.get("sender_phone") + "\n" +
+    "Телефон для связи: " + formData.get("contact_phone") + "\n" +
+    "Email: " + formData.get("email") + "\n" +
+    "Мессенджер: " + formData.get("messenger");
+
+  await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text
+    })
+  });
+}
+
+document.querySelector(".contact-box").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  await sendToTelegram(formData);
+  alert("Данные отправлены. Мы скоро вышлем ключ.");
+});
+</script>
+
 </html>
