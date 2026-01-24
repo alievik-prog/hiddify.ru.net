@@ -14,6 +14,7 @@ const translations = {
 };
 
 function setLanguage(lang) {
+  alert("Язык переключён на: " + lang);
   document.querySelector("[data-i18n='title']").textContent =
     translations[lang].title;
 
