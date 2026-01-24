@@ -187,29 +187,20 @@ body {
   opacity: 0.85;
 }
 
-/* ===== PLATFORMS FINAL PERFECT ===== */
-/* Красивый подзаголовок под платформами */
+/* ===== PLATFORMS FINAL FIX (CLEAN) ===== */
 
-.platform-subtitle {
-  color: #666 !important;
+#platforms {
+  text-align: center;
+}
+
+#platforms .platform-subtitle {
+  color: #666;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto 40px auto;
-  text-align: center !important;
-}
-
-.platforms {
   text-align: center;
-}
-
-.platform-subtitle {
-  margin-top: -15px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  color: #666;
-  font-weight: 400;
 }
 
 .platform-grid {
@@ -235,11 +226,24 @@ body {
   transform: translateY(-4px);
 }
 
-/* Все иконки одинаковые */
 .platform-img {
   width: 55px;
   height: 55px;
   object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .platform-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .platform-img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 /* ===== MOBILE ===== */
