@@ -22,49 +22,6 @@
     <a id="bank-link" class="btn-main" href="#" target="_blank">
       Перейти в Сбербанк для перевода
     </a>
-
-    <!-- FORM -->
-    <form id="contact-form" class="contact-box">
-      <h4>
-        После оплаты оставьте ваши контактные данные,
-        чтобы мы отправили вам ключ доступа.
-      </h4>
-
-      <input name="firstname" placeholder="Имя *" required>
-      <input name="lastname" placeholder="Фамилия *" required>
-
-      <input
-        name="sender_phone"
-        placeholder="Номер телефона, с которого оплатили *"
-        required
-      >
-
-      <input
-        name="contact_phone"
-        placeholder="Ваш номер для связи *"
-        required
-      >
-
-      <input
-        name="email"
-        type="email"
-        placeholder="Email (необязательно)"
-      >
-
-      <input
-        name="messenger"
-        placeholder="WhatsApp / Telegram / MAX (необязательно)"
-      >
-
-      <button type="submit" class="btn-main">
-        Отправить данные
-      </button>
-
-      <p class="contact-note">
-        Мы вышлем ключ после подтверждения оплаты.
-      </p>
-    </form>
-
   </div>
 </section>
 
@@ -92,44 +49,6 @@ document.getElementById("bank-link").href = bank.link;
 
 index = (index + 1) % banks.length;
 sessionStorage.setItem("payBankIndex", index);
-
-
-/* ===== ОТПРАВКА ФОРМЫ НА VPS BACKEND ===== */
-
-document.getElementById("contact-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(e.target);
-
-  const payload = {
-    name: formData.get("firstname"),
-    surname: formData.get("lastname"),
-    pay_phone: formData.get("sender_phone"),
-    contact_phone: formData.get("contact_phone"),
-    email: formData.get("email"),
-    messenger: formData.get("messenger")
-  };
-
-  try {
-    const res = await fetch("http://171.22.30.27:5000/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-
-    const data = await res.json();
-
-    if (data.status === "ok") {
-      alert("Заявка отправлена! Мы скоро свяжемся с вами.");
-      e.target.reset();
-    } else {
-      alert("Ошибка отправки: " + data.details);
-    }
-
-  } catch (err) {
-    alert("Сервер недоступен. Попробуйте позже.");
-  }
-});
 </script>
 
 </body>
