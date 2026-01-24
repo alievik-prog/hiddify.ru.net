@@ -432,7 +432,7 @@ body {
 
 .contact-box input {
   width: 100%;
-  max-width: 320px;
+  max-width: 720px;
   margin: 8px auto;
   padding: 12px 14px;
   border-radius: 12px;
@@ -458,7 +458,7 @@ body {
 }
 .contact-box input {
   width: 100%;
-  max-width: 360px;
+  max-width: 720px;
   margin: 10px auto;
   padding: 14px 16px;
   border-radius: 14px;
