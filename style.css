@@ -255,3 +255,55 @@ body {
     gap: 15px;
   }
 }
+/* ===== PLATFORMS PROTON STYLE ===== */
+
+.platform-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.platform-card {
+  width: 110px;
+  padding: 18px 12px;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.platform-card:hover {
+  transform: translateY(-4px);
+}
+
+.platform-card.active {
+  border: 2px solid #4f46e5;
+}
+
+.platform-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 12px;
+  border-radius: 14px;
+  background: #eef3ff;
+}
+
+/* Fake clean icons (like Proton style) */
+.platform-icon.windows { background: #dbeafe; }
+.platform-icon.mac     { background: #f3f4f6; }
+.platform-icon.android { background: #dcfce7; }
+.platform-icon.ios     { background: #e0e7ff; }
+.platform-icon.linux   { background: #fee2e2; }
+.platform-icon.chrome  { background: #fef9c3; }
+.platform-icon.firefox { background: #ffedd5; }
+.platform-icon.tv      { background: #ede9fe; }
+.platform-icon.fire    { background: #ffe4e6; }
+
+.platform-name {
+  font-size: 15px;
+  font-weight: 600;
+}
