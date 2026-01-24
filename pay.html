@@ -13,20 +13,62 @@
   <h2>Оплата подписки Hiddify VPN</h2>
 
   <div class="pay-box">
-    <h3>Наведите камерой на QR-код</h3>
 
-    <!-- QR -->
+    <!-- ===== СБЕРБАНК QR ===== -->
+    <h3>Наведите камерой на QR-код для оплаты</h3>
+
     <img id="bank-qr" class="pay-qr" src="" alt="QR для оплаты">
 
-    <!-- Link -->
     <a id="bank-link" class="btn-main" href="#" target="_blank">
       Перейти в Сбербанк для перевода
     </a>
+
+    <!-- ===== ПОСЛЕ ОПЛАТЫ ===== -->
+    <div class="after-pay">
+      <h3>После оплаты свяжитесь с нами</h3>
+      <p>
+        Напишите нам в Telegram или WhatsApp, чтобы получить ключ доступа.
+      </p>
+    </div>
+
+    <!-- ===== TELEGRAM + WHATSAPP ===== -->
+    <div class="messenger-grid">
+
+      <!-- TELEGRAM -->
+      <div class="messenger-card">
+        <h4>Telegram</h4>
+
+        <img src="img/telegram-qr.png" class="pay-qr small"
+             alt="QR Telegram">
+
+        <a class="btn-outline"
+           href="https://t.me/shamil_alidamadaev?text=Хочу%20узнать%20про%20Hiddify%20VPN"
+           target="_blank">
+          Перейти в Telegram
+        </a>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="messenger-card">
+        <h4>WhatsApp</h4>
+
+        <img src="img/whatsapp-qr.png" class="pay-qr small"
+             alt="QR WhatsApp">
+
+        <a class="btn-outline"
+           href="https://wa.me/79298791010?text=Хочу%20узнать%20про%20Hiddify%20VPN"
+           target="_blank">
+          Перейти в WhatsApp
+        </a>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 <script>
-/* ===== QR ПО ОЧЕРЕДИ ===== */
+/* ===== QR ОПЛАТЫ (СБЕР) ПО ОЧЕРЕДИ ===== */
 
 const banks = [
   {
