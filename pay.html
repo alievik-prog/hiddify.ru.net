@@ -33,20 +33,28 @@
       <input name="firstname" placeholder="Имя *" required>
       <input name="lastname" placeholder="Фамилия *" required>
 
-      <input name="sender_phone"
+      <input
+        name="sender_phone"
         placeholder="Номер телефона, с которого оплатили *"
-        required>
+        required
+      >
 
-      <input name="contact_phone"
+      <input
+        name="contact_phone"
         placeholder="Ваш номер для связи *"
-        required>
+        required
+      >
 
-      <input name="email"
+      <input
+        name="email"
         type="email"
-        placeholder="Email (необязательно)">
+        placeholder="Email (необязательно)"
+      >
 
-      <input name="messenger"
-        placeholder="WhatsApp / Telegram / MAX (необязательно)">
+      <input
+        name="messenger"
+        placeholder="WhatsApp / Telegram / MAX (необязательно)"
+      >
 
       <button type="submit" class="btn-main">
         Отправить данные
@@ -86,36 +94,41 @@ index = (index + 1) % banks.length;
 sessionStorage.setItem("payBankIndex", index);
 
 
-/* ===== TELEGRAM ОТПРАВКА ===== */
-
-const TOKEN = "8423320027:AAHyfWUUeG4XOvb-dJOErknUF3AKt__Wheo";
-const CHAT_ID = "708010287";
+/* ===== ОТПРАВКА ФОРМЫ НА VPS BACKEND ===== */
 
 document.getElementById("contact-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(e.target);
 
-  const text =
-    "Новая заявка оплаты Hiddify VPN:\n\n" +
-    "Имя: " + formData.get("firstname") + "\n" +
-    "Фамилия: " + formData.get("lastname") + "\n" +
-    "Телефон отправителя: " + formData.get("sender_phone") + "\n" +
-    "Телефон для связи: " + formData.get("contact_phone") + "\n" +
-    "Email: " + formData.get("email") + "\n" +
-    "Мессенджер: " + formData.get("messenger");
+  const payload = {
+    name: formData.get("firstname"),
+    surname: formData.get("lastname"),
+    pay_phone: formData.get("sender_phone"),
+    contact_phone: formData.get("contact_phone"),
+    email: formData.get("email"),
+    messenger: formData.get("messenger")
+  };
 
-  await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      chat_id: CHAT_ID,
-      text: text
-    })
-  });
+  try {
+    const res = await fetch("http://171.22.30.27:5000/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
 
-  alert("Данные отправлены. Мы скоро вышлем ключ.");
-  e.target.reset();
+    const data = await res.json();
+
+    if (data.status === "ok") {
+      alert("Заявка отправлена! Мы скоро свяжемся с вами.");
+      e.target.reset();
+    } else {
+      alert("Ошибка отправки: " + data.details);
+    }
+
+  } catch (err) {
+    alert("Сервер недоступен. Попробуйте позже.");
+  }
 });
 </script>
 
