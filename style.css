@@ -170,6 +170,50 @@ body {
   border: 2px solid #4f46e5;
 }
 
+.price-card p {
+  margin-bottom: 20px;
+}
+
+/* PLATFORMS */
+.platforms {
+  text-align: center;
+}
+
+.platform-subtitle {
+  margin-top: -20px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #444;
+}
+
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.platform-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  padding: 18px 22px;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+.platform-item:hover {
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.platform-item.active {
+  border: 2px solid #4f46e5;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
 /* FAQ */
 .faq details {
   background: white;
@@ -210,13 +254,4 @@ body {
     flex-direction: column;
     gap: 15px;
   }
-}
-/* FIX: отступ между текстом и кнопкой в тарифах */
-.price-card p {
-  margin-bottom: 20px;
-}
-
-.price-card .btn-main {
-  display: inline-block;
-  margin-top: 10px;
 }
