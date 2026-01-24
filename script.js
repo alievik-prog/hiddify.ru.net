@@ -25,7 +25,7 @@ const translations = {
     f2Text: "Современное шифрование и защита от слежки.",
     f3Title: "Максимальная скорость",
     f3Text: "Без просадок и ограничений по трафику.",
-    f4Title: "До 10 устройств",
+    f4Title: "До 5 устройств",
     f4Text: "Одна подписка для телефона, ноутбука и ТВ.",
     f5Title: "Блокировка рекламы",
     f5Text: "Встроенный фильтр рекламы и трекеров.",
@@ -34,7 +34,7 @@ const translations = {
 
     platformTitle: "Защитите каждое подключение",
     platformSubtitle:
-      "Скачайте Hiddify VPN сегодня и подключите до 10 устройств с одной подпиской.",
+      "Скачайте Hiddify VPN сегодня и подключите до 5 устройств с одной подпиской.",
 
     platWindows: "Windows",
     platMac: "macOS",
@@ -63,7 +63,7 @@ const translations = {
     q2: "Есть ли бесплатный тест?",
     a2: "Да, вы можете попробовать бесплатно перед покупкой.",
     q3: "Сколько устройств поддерживается?",
-    a3: "До 10 устройств на одной подписке.",
+    a3: "До 5 устройств на одной подписке.",
 
     blogTitle: "Блог Hiddify VPN",
     b1Title: "Почему важна приватность?",
@@ -102,7 +102,7 @@ const translations = {
     f2Text: "Modern encryption and protection from tracking.",
     f3Title: "Maximum speed",
     f3Text: "No slowdowns or traffic limits.",
-    f4Title: "Up to 10 devices",
+    f4Title: "Up to 5 devices",
     f4Text: "One subscription for phone, laptop, and TV.",
     f5Title: "Ad blocker",
     f5Text: "Built-in filter against ads and trackers.",
@@ -128,9 +128,9 @@ const translations = {
     pricingTitle: "Choose your Hiddify VPN Plus plan",
     p1Title: "1 month",
     p1Text: "Perfect for testing",
-    p2Title: "12 months",
+    p2Title: "6 months",
     p2Text: "Best offer",
-    p3Title: "24 months",
+    p3Title: "12 months",
     p3Text: "Maximum savings",
     btnChoose: "Select",
 
