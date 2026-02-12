@@ -439,3 +439,13 @@ body {
   font-size: 15px;
   opacity: 0.9;
 }
+.app-badge{
+  transition: 0.2s ease;
+}
+
+.app-badge:hover{
+  background:#e0f2ff;
+  border-color:#38bdf8;
+  color:#0284c7;
+  transform: translateY(-2px);
+}
