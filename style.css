@@ -449,3 +449,44 @@ body {
   color:#0284c7;
   transform: translateY(-2px);
 }
+/* Новый шрифт */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Текст под заголовком */
+.pricing-info {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* Улучшенные кнопки */
+.btn-plan {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+/* Hover эффект */
+.btn-plan:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Дополнительное свечение */
+.btn-green:hover {
+  box-shadow: 0 12px 25px rgba(37,211,102,0.4);
+}
+
+.btn-purple:hover {
+  box-shadow: 0 12px 25px rgba(108,99,255,0.4);
+}
